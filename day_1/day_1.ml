@@ -17,6 +17,7 @@ let read_file filename =
     (*tole je tuja koda iz stackoverflow (dodala sem "int_of_string")- https://stackoverflow.com/questions/5774934/how-do-i-read-in-lines-from-a-text-file-in-ocaml *)
 
 
+
 let rec sestej seznam vsota= match seznam with
   | [] -> []
   | _ :: [] -> []
@@ -58,7 +59,6 @@ let rec preveri_vse_2 seznam = match seznam with
 let vrni_string sez = match sez with
   | [] -> "0"
   | a::rest -> string_of_int(a)
-
 
 let naloga1 vsebina_datoteke = prod (preveri_vse vsebina_datoteke)
 
