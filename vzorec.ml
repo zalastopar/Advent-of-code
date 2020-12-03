@@ -2,11 +2,6 @@
 let ime_datoteke = "day_2/day_2.in"
 
 
-let naloga1 vsebina_datoteke =
-  "10"
-
-let naloga2 vsebina_datoteke =
-  string_of_int (String.length vsebina_datoteke)
 
 
 let read_file filename = 
@@ -22,7 +17,11 @@ let read_file filename =
     (*tole je tuja koda iz stackoverflow (dodala sem "int_of_string")- https://stackoverflow.com/questions/5774934/how-do-i-read-in-lines-from-a-text-file-in-ocaml *)
 
 
+let naloga1 vsebina_datoteke =
+  "10"
 
+let naloga2 vsebina_datoteke =
+  string_of_int (String.length vsebina_datoteke)
 
 let _ =
   let preberi_datoteko ime_datoteke =
