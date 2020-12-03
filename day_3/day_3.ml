@@ -30,15 +30,6 @@ let rec razbij seznam =
   pomozna [] seznam
 
 
-let rec premik_3_1 pozicija seznam = 
-  let rec pomozna drevesa seznam pozicija = match pozicija with
-    | (i, j) -> 
-    if i >= (List.length seznam) - 1 then drevesa 
-    else if j <= 27 then if (List.nth (List.nth seznam (i +1)) (j + 3)) = '#' then pomozna (drevesa + 1) seznam (i + 1, j + 3) else pomozna drevesa seznam (i + 1, j + 3)
-    else if (List.nth (List.nth seznam (i + 1)) (j + 3 - 31)) = '#' then pomozna (drevesa + 1) seznam (i + 1, j - 31 + 3 ) else pomozna drevesa seznam (i + 1, j - 31+ 3)
-  in
-  pomozna 0 seznam pozicija
-(*220*)
 
 let rec premik pozicija seznam dol desna =
   let rec pomozna drevesa seznam pozicija dol desna = match pozicija with
