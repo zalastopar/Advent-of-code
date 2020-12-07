@@ -9,12 +9,12 @@ let read_file filename =
   let chan = open_in filename in
   try
     while true; do
-      lines := int_of_string (input_line chan) :: !lines
+      lines := (input_line chan) :: !lines
     done; !lines
   with End_of_file ->
     close_in chan;
     List.rev !lines ;;
-    (*tole je tuja koda iz stackoverflow (dodala sem "int_of_string")- https://stackoverflow.com/questions/5774934/how-do-i-read-in-lines-from-a-text-file-in-ocaml *)
+    (*tole je tuja koda iz stackoverflow - https://stackoverflow.com/questions/5774934/how-do-i-read-in-lines-from-a-text-file-in-ocaml *)
 
 
 let naloga1 vsebina_datoteke =
