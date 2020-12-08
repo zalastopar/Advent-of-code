@@ -3,7 +3,6 @@ let ime_datoteke = "day_2/day_2.in"
 
 
 
-
 let read_file filename = 
   let lines = ref [] in
   let chan = open_in filename in
@@ -30,8 +29,9 @@ let _ =
       close_out chan
   in
   let vsebina_datoteke = read_file ime_datoteke in
-  let odgovor1 = naloga1 vsebina_datoteke
-  and odgovor2 = naloga2 vsebina_datoteke
+  let odgovor1 = string_of_int (naloga1 vsebina_datoteke)
+  and odgovor2 = string_of_int (naloga2 vsebina_datoteke)
   in
   izpisi_datoteko "day_5/day_5_1.out" odgovor1;
   izpisi_datoteko "day_5/day_5_2.out" odgovor2  
+
