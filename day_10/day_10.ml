@@ -90,9 +90,7 @@ let zmnozi seznam =
   let skok = skoki seznam in
   let rec vse_kombinacije st sez = match sez with
     | [] -> st
-    | a :: rest -> 
-    if List.length a >= 3 then  vse_kombinacije (st * (izloci_napacne (moc_mnozice a))) rest
-    else vse_kombinacije (st * (izloci_napacne (moc_mnozice a))) rest
+    | a :: rest -> vse_kombinacije (st * (izloci_napacne (moc_mnozice a))) rest
   in vse_kombinacije 1 skok
 
 
